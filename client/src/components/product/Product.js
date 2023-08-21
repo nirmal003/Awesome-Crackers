@@ -62,7 +62,6 @@ function Product() {
           alt="Diwali Crackers"
         />
       </div>
-
       <div className="crat_sticky bg-white  d-flex flex-row justify-content-between w-100 text-center px-lg-5 px-md-5">
         <div className="fw-bold text-wrap cart_price">
           Total Products : {cartProduct.length}
@@ -76,7 +75,6 @@ function Product() {
           Overall Total : ₹.{Math.floor(totalPrice)}
         </div>
       </div>
-
       <>
         {Object.keys(groupByCategory).length ? (
           Object.entries(groupByCategory).map(([key, value]) => (
@@ -137,18 +135,16 @@ function Product() {
         )}
       </>
 
-      {cartProduct.length > 0 && (
-        <Link to="/cart">
-          <Button
-            variant="success"
-            className={`mt-4 fs-5 fw-bold ${
-              Number(cartProduct.length) > 0 ? "" : "disabled"
-            }`}
-          >
-            Submit
-          </Button>
-        </Link>
-      )}
+      <Link to="/cart">
+        <Button
+          variant="success"
+          className={`mt-4 fs-5 fw-bold ${
+            cartProduct.length > 0 ? "" : "disabled"
+          }`}
+        >
+          Submit
+        </Button>
+      </Link>
 
       {show && <ModelView imgUrl={imgUrl} show={() => setShow(!show)} />}
     </>
