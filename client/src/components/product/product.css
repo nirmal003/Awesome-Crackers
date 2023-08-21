@@ -82,8 +82,19 @@
 }
 
 .strike {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  position: relative;
+}
+
+.strike:before {
+  border-bottom: 0.11rem solid red;
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .price {
