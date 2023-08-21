@@ -37,7 +37,7 @@ function Home() {
     <div className="w-100">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home</title>
+        <title>Awesome Crackers</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="w-100">
