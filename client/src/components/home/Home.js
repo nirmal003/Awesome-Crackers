@@ -1,6 +1,7 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { Button, Col, Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import WOW from "wowjs";
@@ -34,6 +35,11 @@ function Home() {
 
   return (
     <div className="w-100">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="w-100">
         <img
           className="img-fluid"
