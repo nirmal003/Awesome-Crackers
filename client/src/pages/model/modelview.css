@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.model {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  height: 500px;
+  overflow: hidden;
+  z-index: 6;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 90px 4px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.span {
+  position: absolute;
+  cursor: pointer;
+  right: -8px;
+  top: -29px;
+  font-size: 3rem;
+  z-index: 7;
+  color: #000;
+}
+
+.span:active {
+  color: rgb(255, 1, 1);
+}
+
+.model img {
+  margin: 31px 8px 4px;
+  width: 340px;
+  height: 460px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}

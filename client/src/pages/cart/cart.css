@@ -1,0 +1,191 @@
+/* .cart_list_con ::before {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+} */
+
+.cart_list_con {
+  /* background-image: url("https://www.malathicrackers.com/images/parallax.jpg"); */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(158, 139, 111);
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  display: flex;
+  overflow-wrap: break-word;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.cart {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart_head_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 24px;
+}
+
+.cart_goback_btn {
+  position: fixed;
+  z-index: 2;
+  top: 70px;
+  right: 0;
+  font-size: 50px;
+  color: #fff;
+  width: 52px;
+  height: 52px;
+  padding: 1px;
+  margin: 3px;
+  background: blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoop_parent {
+  margin-top: 12px;
+  position: relative;
+  width: 100%;
+  color: black;
+}
+
+.scoop {
+  position: relative;
+  z-index: 1;
+  background: rgb(0, 0, 0);
+  margin: 1px;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.scoop1 {
+  min-height: 80px;
+  height: max-content;
+  padding: 0 6px;
+  /* font-weight: 600; */
+  /* font-size: 16px; */
+}
+.scoop2 {
+  padding: 0 4px 0 8px;
+  height: 60px;
+  /* font-weight: 600; */
+  /* font-size: 16px; */
+}
+
+.scoop2_amnt {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cart_img_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  padding: 2px;
+}
+
+.cart_img_con img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 9px;
+  padding: 2px 0;
+}
+
+.cart_img_con span {
+  padding: 2px 2px 2px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  align-self: start;
+}
+
+.cart_input_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.cart_input_con input {
+  margin-left: 4px;
+}
+
+.cart_cancel_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cart_cancel_icon {
+  font-size: 18px;
+  background-color: red;
+  color: #fff;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estimate_btn_con {
+  background: rgb(0, 255, 0);
+  font-weight: 600;
+  border-radius: 6px;
+  width: max-content;
+  padding: 6px;
+  margin: 40px 16px 240px;
+}
+
+.scoop:before {
+  z-index: -2;
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at 0 0, transparent 3%, white calc(3%)) top
+      left,
+    radial-gradient(circle at 100% 0, transparent 3%, white calc(3%)) top right,
+    radial-gradient(circle at 0 100%, transparent 3%, white calc(3%)) bottom
+      left,
+    radial-gradient(circle at 100% 100%, transparent 3%, white calc(3%)) bottom
+      right;
+  background-size: 51% 51%;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}

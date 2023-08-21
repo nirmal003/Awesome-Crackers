@@ -1,0 +1,123 @@
+.cracker {
+  margin: 4px;
+}
+
+.para {
+  text-indent: 7%;
+  text-align: left;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  min-width: 330px;
+}
+
+.parallax::before {
+  background: #000 none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.parallax {
+  background-image: url("https://nirmal003.github.io/Images/home6.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallaxpad {
+  padding: 80px 0;
+}
+
+.headfnt1 {
+  font-size: 45px;
+  font-weight: 600;
+  position: relative;
+  font-family: "Acme", serif;
+}
+
+.heading5 {
+  font-size: 1.25rem;
+}
+
+.heading4 {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.btn1 {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff0;
+  color: #000;
+  transition: 1s;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn1:hover {
+  background-color: rgb(0, 123, 255);
+  border-radius: 25px;
+  color: #fff;
+}
+
+.whyus {
+  background-image: url("https://nirmal003.github.io/Images/home17.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.img1 {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  object-fit: cover;
+}
+
+.img2 {
+  margin-top: 50px;
+}
+
+.img3 {
+  margin-top: -35px;
+}
+
+.img4 {
+  margin-top: 15px;
+}
+
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 680px) {
+  .para {
+    text-indent: 12%;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .cracker {
+    margin: 0 80px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .cracker {
+    margin: 0 180px;
+  }
+}

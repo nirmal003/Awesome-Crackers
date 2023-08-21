@@ -1,0 +1,132 @@
+.pro_title {
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+  /* font-weight: 600; */
+  background: #5a1a60 !important;
+}
+
+.div_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* background-color: #e21515; */
+  background-color: rgb(201, 134, 190);
+  padding: 3px 6px;
+  margin: 0;
+}
+
+.pro_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe6ff;
+  border-radius: 9px;
+  margin: 2px 0;
+  padding: 6px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 90px 4px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.img_con {
+  width: 140px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img_con img {
+  object-fit: cover;
+  border-radius: 15px;
+  width: 120px !important;
+  height: 120px !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.proId_con {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1px;
+  border-radius: 0 0 12px 0;
+  width: max-content;
+  min-width: 32px;
+  background-color: rgb(10, 10, 190);
+}
+
+.details_con {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  align-self: start;
+}
+
+.pro_head {
+  margin: 0;
+  font-size: 1rem;
+  float: left;
+  padding: 3px 0 0 12px;
+}
+
+.price_con {
+  padding: 20px 0 0;
+}
+
+.strike {
+  font-size: 12px;
+}
+.price {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.input {
+  width: 55px;
+  padding: 4px 6px;
+  /* border: none; */
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: acme;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.tot_price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 25px 0 9px 0;
+  overflow: hidden;
+  width: max-content;
+  min-width: 90px;
+  background-color: rgb(10, 10, 190);
+}
+
+.crat_sticky {
+  position: sticky;
+  top: 0;
+  padding: 4px;
+  /* background-color: rgb(229, 254, 4); */
+  z-index: 1;
+}
+
+.cart_price {
+  font-size: 16px;
+}
