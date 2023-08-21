@@ -177,7 +177,7 @@ function Home() {
               <div className="pt-lg-4"></div>
               <Link to="/products">
                 <img
-                  src="https://nirmal003.github.io/Images/home8.png"
+                  src="https://nirmal003.github.io/Images/home10.png"
                   className="img-fluid pb-3 wow rollIn"
                   data-aos="flip-left"
                   // data-aos-duration="300"
@@ -208,7 +208,7 @@ function Home() {
             <div className="col-lg-4 col-md-4 text-center pt-4">
               <Link to="/product">
                 <img
-                  src="https://nirmal003.github.io/Images/home10.png"
+                  src="https://nirmal003.github.io/Images/home8.png"
                   className="img-fluid pb-3 wow rollIn"
                   data-aos="flip-left"
                   // data-aos-duration="300"
