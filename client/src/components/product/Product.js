@@ -137,11 +137,18 @@ function Product() {
         )}
       </>
 
-      <Link to="/cart">
-        <Button variant="success" className="mt-4 fs-5 fw-bold">
-          Submit
-        </Button>
-      </Link>
+      {cartProduct.length > 0 && (
+        <Link to="/cart">
+          <Button
+            variant="success"
+            className={`mt-4 fs-5 fw-bold ${
+              Number(cartProduct.length) > 0 ? "" : "disabled"
+            }`}
+          >
+            Submit
+          </Button>
+        </Link>
+      )}
 
       {show && <ModelView imgUrl={imgUrl} show={() => setShow(!show)} />}
     </>
