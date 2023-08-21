@@ -46,7 +46,7 @@ function Product() {
 
   const groupByCategory = data && helpers.productCategory(data);
 
-  console.log(groupByCategory);
+  // console.log(groupByCategory);
 
   const getImgUrl = (url) => {
     setImgUrl(url);

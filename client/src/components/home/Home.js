@@ -30,7 +30,7 @@ function Home() {
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data.data);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="w-100">
