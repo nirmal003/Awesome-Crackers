@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "react-bootstrap";
 import { ImSpinner3 } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as helpers from "../../Helper/helper";
 import ModelView from "../../pages/model/ModelView";
 import { addData } from "../home/dataSlice";
@@ -14,6 +14,8 @@ import "./product.css";
 function Product() {
   const [imgUrl, setImgUrl] = useState("");
   const [show, setShow] = useState(() => false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData();
@@ -135,16 +137,16 @@ function Product() {
         )}
       </>
 
-      <Link to="/cart">
-        <Button
-          variant="success"
-          className={`mt-4 fs-5 fw-bold ${
-            cartProduct.length > 0 ? "" : "disabled"
-          }`}
-        >
+      <Button
+        variant="success"
+        className={`mt-4 fs-5 fw-bold ${
+          cartProduct?.length > 0 ? "" : "disabled"
+        }`}
+      >
+        <Link to="/cart" className="text-decoration-none text-white">
           Submit
-        </Button>
-      </Link>
+        </Link>
+      </Button>
 
       {show && <ModelView imgUrl={imgUrl} show={() => setShow(!show)} />}
     </>
