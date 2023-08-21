@@ -113,7 +113,10 @@ function Product() {
                           <span className="price">
                             ₹{" "}
                             {Math.round(
-                              `${u.Product_Price - u.Product_Price * 0.3}`
+                              `${
+                                u.Product_Price -
+                                (u.Discount_Percentage / 100) * u.Product_Price
+                              }`
                             )}
                             .00 / {u.Material_Type}
                           </span>
