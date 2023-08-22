@@ -26,9 +26,9 @@ function NavBar() {
         </Row>
         <Row className="header">
           <Col>
-            <div className="rounded-2 px-3 m-3 bg-success border border-4 border-warning text-white fs-5 crackers">
+            <div className="rounded-2 px-3 m-3 mx-5 bg-success border border-4 border-warning text-white fs-5 crackers">
               Crackers Available All 365 Days! Diwali Sales Started. Celebrate
-              Diwali with Malathi Crackers
+              Diwali with Awesome Crackers
             </div>
           </Col>
 
