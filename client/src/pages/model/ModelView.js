@@ -10,7 +10,8 @@ function ModelView({ show, imgUrl }) {
         <span className="span" onClick={show}>
           <IoIosClose />
         </span>
-        <img src={imgUrl} loading="lazy" alt="no-file" />
+
+        <img src={imgUrl} loading="lazy" alt="no-file" className="w-100" />
       </div>
     </>
   );
