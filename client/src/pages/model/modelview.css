@@ -19,6 +19,9 @@
   z-index: 6;
   border-radius: 6px;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 90px 4px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
@@ -38,11 +41,13 @@
   color: rgb(255, 1, 1);
 }
 
-.model img {
-  margin: 31px 8px 4px;
-  /* width: 340px; */
-  /* height: 460px; */
-  object-fit: cover;
+.modelimg_con {
+  width: 100%;
+}
+
+.modelimg_con img {
+  width: 100%;
+  padding: 8px 20px;
   overflow: hidden;
   border-radius: 10px;
 }
