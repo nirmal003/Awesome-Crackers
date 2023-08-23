@@ -11,7 +11,7 @@ function ModelView({ show, imgUrl }) {
           <IoIosClose />
         </span>
         <div className="modelimg_con">
-          <img src={imgUrl} loading="lazy" alt="no-file" className="" />
+          <img src={imgUrl} loading="lazy" alt="no-file" />
         </div>
       </div>
     </>
