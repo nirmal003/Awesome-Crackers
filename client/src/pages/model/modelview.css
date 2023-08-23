@@ -40,7 +40,7 @@
 
 .model img {
   margin: 31px 8px 4px;
-  width: 340px;
+  /* width: 340px; */
   height: 460px;
   object-fit: cover;
   overflow: hidden;
