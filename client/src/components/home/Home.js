@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import WOW from "wowjs";
-import logo from "./favicon.ico";
 import "./home.css";
 
 import { addData } from "./dataSlice";
@@ -38,7 +37,6 @@ function Home() {
     <div className="w-100">
       <Helmet>
         <meta charSet="utf-8" />
-        <link rel="icon" href={logo} />
         <title>Awesome Crackers</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
