@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
-import { HiShoppingCart } from "react-icons/hi";
+import { HiMenu, HiShoppingCart } from "react-icons/hi";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./navbar.css";
@@ -70,10 +70,17 @@ function NavBar() {
         <Container>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav "
-            className="text-white fw-bold fs-2 border border-1 m-1"
+            className="vertical-align-middle text-white fw-bold fs-2 border border-1 m-1"
           >
-            MENU
+            <HiMenu
+              className="fs-2 vertical-align-middle d-inline-block justify-content-center
+            align-content-center mb-1 "
+            />
+            <span className="mx-1 d-inline-flex justify-content-center align-items-center vertical-align-middle">
+              MENU
+            </span>
           </Navbar.Toggle>
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto fw-bold">
               <Nav.Link>

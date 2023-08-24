@@ -207,16 +207,18 @@ function Footer() {
         </a>
       </div>
 
-      <div className="fixed point2">
-        <Link to="/product">
-          <img
-            src="https://nirmal003.github.io/Images/quickpurchase.png"
-            className="priceicn2 float-right"
-            alt="Awesome Crackers"
-            title="Awesome Crackers"
-          />
-        </Link>
-      </div>
+      {pathname !== "/product" && (
+        <div className="fixed point2">
+          <Link to="/product">
+            <img
+              src="https://nirmal003.github.io/Images/quickpurchase.png"
+              className="priceicn2 float-right"
+              alt="Awesome Crackers"
+              title="Awesome Crackers"
+            />
+          </Link>
+        </div>
+      )}
     </>
   );
 }
