@@ -1,11 +1,11 @@
 import Aos from "aos";
 import React, { useEffect } from "react";
 import { Button, Col, Row } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import WOW from "wowjs";
 import "./home.css";
-// import { Helmet } from "react-helmet";
 
 import { addData } from "./dataSlice";
 
@@ -35,11 +35,13 @@ function Home() {
 
   return (
     <div className="w-100">
-      {/* <Helmet>
+      <Helmet>
         <meta charSet="utf-8" />
+        <link rel="icon" href="../../public/favicon.jpg" />
         <title>Awesome Crackers</title>
         <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet> */}
+      </Helmet>
+
       <div className="w-100">
         <img
           className="img-fluid"
