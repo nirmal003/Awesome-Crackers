@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import WOW from "wowjs";
-import logo from "./favicon.jpg";
+import logo from "./favicon.ico";
 import "./home.css";
 
 import { addData } from "./dataSlice";
