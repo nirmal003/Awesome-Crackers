@@ -37,7 +37,7 @@ function Home() {
     <div className="w-100">
       <Helmet>
         <meta charSet="utf-8" />
-        <link rel="icon" href="../../../public/favicon.jpg" />
+        <link rel="icon" href="./favicon.jpg" />
         <title>Awesome Crackers</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
