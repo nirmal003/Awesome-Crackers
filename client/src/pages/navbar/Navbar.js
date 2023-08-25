@@ -70,7 +70,7 @@ function NavBar() {
         <Container>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav "
-            className="vertical-align-middle text-white fw-bold fs-2 border border-1 m-1 pt-2"
+            className="vertical-align-middle text-white fw-bold fs-2 border border-1 m-1 pt-1 px-2 pb-0"
           >
             <HiMenu
               className="fs-2 vertical-align-middle d-inline-block justify-content-center
