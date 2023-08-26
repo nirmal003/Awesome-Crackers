@@ -10,6 +10,7 @@ import Safety from "./components/safety/Safety";
 import Cart from "./pages/cart/Cart";
 import Estimate from "./pages/estimate/Estimate";
 import Footer from "./pages/footer/Footer";
+import ModelView from "./pages/model/ModelView";
 import NavBar from "./pages/navbar/Navbar";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<ModelView />} />
           <Route path="/about" element={<About />} />
           <Route path="/safety" element={<Safety />} />
           <Route path="/contact" element={<Contact />} />
