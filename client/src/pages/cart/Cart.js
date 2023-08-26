@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,12 +6,8 @@ import "./cart.css";
 
 import * as helpers from "../../Helper/helper";
 import { deleteCart, updateCart } from "../../components/product/cartSlice";
-import ModelView from "../model/ModelView";
 
 function Cart() {
-  const [imgUrl, setImgUrl] = useState("");
-  const [show, setShow] = useState(false);
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -56,11 +52,6 @@ function Cart() {
     // }
   };
 
-  const getImgUrl = (url) => {
-    setImgUrl(url);
-    setShow(!show);
-  };
-
   return (
     <>
       <div className="cart_list_con">
@@ -86,7 +77,11 @@ function Cart() {
                       loading="lazy"
                       src={c.product.u.Image}
                       alt={c.id}
-                      onClick={() => getImgUrl(c.product.u.Image)}
+                      onClick={() =>
+                        navigate(`/product/${c.id}`, {
+                          state: c.product.u.Image,
+                        })
+                      }
                     />
                     <span className="text-start col-7">
                       {c.product.u.Product_Name}
@@ -144,8 +139,6 @@ function Cart() {
           </Link>
         </div>
       </div>
-
-      {show && <ModelView imgUrl={imgUrl} show={() => setShow(!show)} />}
     </>
   );
 }

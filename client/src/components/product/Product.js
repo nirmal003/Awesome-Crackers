@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "react-bootstrap";
 import { ImSpinner3 } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import * as helpers from "../../Helper/helper";
-import ModelView from "../../pages/model/ModelView";
 import { addData } from "../home/dataSlice";
 import TotalPrice from "./TotalPrice";
 import { deleteCart } from "./cartSlice";
 import "./product.css";
 
 function Product() {
-  const [imgUrl, setImgUrl] = useState("");
-  const [show, setShow] = useState(() => false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,11 +45,6 @@ function Product() {
   const groupByCategory = data && helpers.productCategory(data);
 
   // console.log(groupByCategory);
-
-  const getImgUrl = (url) => {
-    setImgUrl(url);
-    setShow(!show);
-  };
 
   return (
     <>
@@ -94,7 +85,11 @@ function Product() {
                         loading="lazy"
                         src={u.Image}
                         alt={u.Product_id}
-                        onClick={() => getImgUrl(u.Image)}
+                        onClick={() =>
+                          navigate(`/product/${u.Product_id}`, {
+                            state: u.Image,
+                          })
+                        }
                       />
                       <span className="proId_con">{u.Product_id}</span>
                     </div>
@@ -147,8 +142,6 @@ function Product() {
           Submit
         </Link>
       </Button>
-
-      {show && <ModelView imgUrl={imgUrl} show={() => setShow(!show)} />}
     </>
   );
 }
