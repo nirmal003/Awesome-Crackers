@@ -164,6 +164,7 @@ function Home() {
                 <i>These are the products we own to you</i>
               </h2>
             </div>
+
             <div className="col-lg-4 col-md-4 text-center pt-4">
               <Link to="/product">
                 <img
@@ -182,7 +183,8 @@ function Home() {
                 and safe to use.
               </p>
               <div className="pt-lg-4"></div>
-              <Link to="/products">
+
+              <Link to="/product">
                 <img
                   src="https://nirmal003.github.io/Images/home10.png"
                   className="img-fluid pb-3 wow rollIn"
@@ -199,6 +201,7 @@ function Home() {
                 colours.
               </p>
             </div>
+
             <div className="col-lg-4 col-md-4 align-self-center text-center">
               <Link to="/product">
                 <img
@@ -212,6 +215,7 @@ function Home() {
                 />
               </Link>
             </div>
+
             <div className="col-lg-4 col-md-4 text-center pt-4">
               <Link to="/product">
                 <img
@@ -230,7 +234,7 @@ function Home() {
                 materials.
               </p>
               <div className="pt-lg-4"></div>
-              <Link to="/products">
+              <Link to="/product">
                 <img
                   src="https://nirmal003.github.io/Images/home11.png"
                   className="img-fluid pb-3 wow rollIn"
