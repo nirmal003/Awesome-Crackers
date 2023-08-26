@@ -21,7 +21,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(process.env.REACT_APP_KEY, { mode: "no-cors" });
+      const data = await fetch(process.env.REACT_APP_KEY);
       const jsonData = await data.json();
       dispatch(addData(jsonData));
     } catch (error) {
