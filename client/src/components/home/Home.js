@@ -21,7 +21,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      const data = await fetch(process.env.REACT_APP_KEY);
+      const data = await fetch(process.env.REACT_APP_KEY, { mode: "no-cors" });
       const jsonData = await data.json();
       dispatch(addData(jsonData));
     } catch (error) {
@@ -37,7 +37,7 @@ function Home() {
     <div className="w-100">
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Awesome Crackerss</title>
+        <title>Awesome Crackers</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 
