@@ -36,7 +36,6 @@ function Home() {
   return (
     <div className="w-100">
       <Helmet>
-        <meta charSet="utf-8" />
         <title>Awesome Crackers</title>
         <link rel="canonical" href="http://www.awesomecrackers.com/" />
       </Helmet>
