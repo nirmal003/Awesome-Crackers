@@ -38,7 +38,7 @@ function Home() {
       <Helmet>
         <title>Awesome Crackers</title>
         <link
-          rel="shortcut icon"
+          rel="icon"
           href="https://nirmal003.github.io/Images/homeaws3.jpg"
           type="image/jpg"
           sizes="16x16"
