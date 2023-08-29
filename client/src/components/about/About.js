@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   FaHeart,
   FaMagic,
@@ -11,6 +12,10 @@ import "./about.css";
 function About() {
   return (
     <>
+      <Helmet>
+        <title>About us</title>
+      </Helmet>
+
       <div className="w-100">
         <img
           className="img-fluid"

@@ -1,10 +1,15 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { ImCheckmark, ImCross } from "react-icons/im";
 import "./safety.css";
 
 function Safety() {
   return (
     <>
+      <Helmet>
+        <title>Safety Tips</title>
+      </Helmet>
+
       <div className="safetytips">
         <div className="cntnr pad">
           <div className="row">

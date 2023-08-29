@@ -51,7 +51,6 @@ function Product() {
     <>
       <Helmet>
         <title>Products</title>
-        <meta name="description" content="Awesome Crackers products" />
       </Helmet>
 
       <div className="w-100">
