@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 import { ImSpinner3 } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
 import * as helpers from "../../Helper/helper";
@@ -48,6 +49,11 @@ function Product() {
 
   return (
     <>
+      <Helmet>
+        <title>Products</title>
+        <meta name="description" content="Awesome Crackers products" />
+      </Helmet>
+
       <div className="w-100">
         <img
           className="img-fluid"
