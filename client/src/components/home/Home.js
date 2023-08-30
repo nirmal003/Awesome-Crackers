@@ -37,12 +37,12 @@ function Home() {
     <div className="w-100">
       <Helmet>
         <title>Awesome Crackers</title>
-        <link
+        {/* <link
           rel="icon"
           href="https://nirmal003.github.io/Images/homeaws3.jpg"
           type="image/jpg"
           sizes="16x16"
-        />
+        /> */}
         <link rel="canonical" href="https://www.awesomecrackers.com/" />
       </Helmet>
 
