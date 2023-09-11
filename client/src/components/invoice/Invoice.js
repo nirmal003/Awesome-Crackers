@@ -33,7 +33,6 @@ function Invoice() {
         const downloadURL = await getDownloadURL(snapshot.ref);
         localStorage.setItem("url", JSON.stringify(downloadURL));
         const url_Link = await JSON.parse(localStorage.getItem("url"));
-        setPdfUrl(url_Link);
 
         fetch(
           `${process.env.REACT_APP_SEND_INVOICE}?invoice_No=${dt.time}&pdf_Url=${downloadURL}`,
@@ -41,6 +40,8 @@ function Invoice() {
             mode: "no-cors",
           }
         );
+
+        setPdfUrl(url_Link);
 
         dispatch(deleteAllCart());
         // console.log("deletedAll", url_Link);
@@ -63,12 +64,22 @@ function Invoice() {
 
   return (
     <div className="d-flex flex-column  my-3 mb-5 pb-5">
-      <h2 className="fw-bold text-success my-2">
-        Your order successfully placed...
-      </h2>
-      <h5 className="thanks_card">
-        Thanks for purchasing in Awesome Crackers. We will contact you soon
-      </h5>
+      {pdfUrl ? (
+        <>
+          <h2 className="fw-bold text-success my-2">
+            Your order successfully placed...
+          </h2>
+          <h5 className="thanks_card">
+            Thanks for purchasing in Awesome Crackers. We will contact you soon
+          </h5>
+        </>
+      ) : (
+        <>
+          <h4 className="fw-bold text-success my-2">
+            " Please wait until process is completing "
+          </h4>
+        </>
+      )}
       <h2 className="fw-bold my-2 mb-3">Download PDF Invoice</h2>
 
       <PDFDownloadLink
@@ -127,13 +138,22 @@ function Invoice() {
 
       <br />
 
-      {pdfUrl && (
+      {pdfUrl ? (
         <div>
           <Button
             variant="danger px-5 mb-5 fs-5 fw-lighter"
             onClick={() => goBack()}
           >
             Back
+          </Button>
+        </div>
+      ) : (
+        <div>
+          <Button
+            variant="danger px-5 mb-5 fs-5 fw-lighter"
+            onClick={() => goBack()}
+          >
+            Don't Go Back
           </Button>
         </div>
       )}
