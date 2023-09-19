@@ -16,6 +16,7 @@ function Invoice() {
   const dt = useParams();
   const [blob, setBlob] = useState(null);
   const [pdfUrl, setPdfUrl] = useState(null);
+  const [order, setOrder] = useState(false);
   const cartProduct = useSelector((state) => state.cart.cart);
   const userData = useSelector((state) => state.user.user);
 
@@ -34,7 +35,7 @@ function Invoice() {
         localStorage.setItem("url", JSON.stringify(downloadURL));
         const url_Link = await JSON.parse(localStorage.getItem("url"));
 
-        fetch(
+        await fetch(
           `${process.env.REACT_APP_SEND_INVOICE}?invoice_No=${dt.time}&pdf_Url=${downloadURL}`,
           {
             mode: "no-cors",
@@ -42,8 +43,9 @@ function Invoice() {
         );
 
         setPdfUrl(url_Link);
-
         dispatch(deleteAllCart());
+        setOrder(true);
+
         // console.log("deletedAll", url_Link);
       } catch (err) {
         console.log(err);
@@ -64,7 +66,7 @@ function Invoice() {
 
   return (
     <div className="d-flex flex-column  my-3 mb-5 pb-5">
-      {pdfUrl ? (
+      {order ? (
         <>
           <h2 className="fw-bold text-success my-2">
             Your order successfully placed...
@@ -90,7 +92,7 @@ function Invoice() {
         {({ blob, url, loading }) =>
           loading ? (
             <div>
-              {!pdfUrl && (
+              {!order && (
                 <Button className="fs-5">
                   <ImSpinner3 />
                   &nbsp; Loading...
@@ -99,13 +101,13 @@ function Invoice() {
             </div>
           ) : (
             <div onClick={setBlob(blob)}>
-              {!pdfUrl && (
+              {!order && (
                 <Button
-                  className={`bg-secondary fw-bold border-0 px-3 fs-5${
-                    cartProduct.length > 0 ? "" : "d-none"
+                  className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
+                    cartProduct.length !== 0 ? "" : "d-none"
                   }`}
                 >
-                  <FaPrint /> &nbsp; Invoice PDF file
+                  <FaPrint /> &nbsp; Invoice PDF filert
                 </Button>
               )}
             </div>
