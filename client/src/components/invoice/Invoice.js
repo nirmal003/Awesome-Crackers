@@ -42,9 +42,9 @@ function Invoice() {
           }
         );
 
-        setPdfUrl(url_Link);
         dispatch(deleteAllCart());
         setOrder(true);
+        setPdfUrl(url_Link);
 
         // console.log("deletedAll", url_Link);
       } catch (err) {
@@ -107,7 +107,7 @@ function Invoice() {
                     cartProduct.length !== 0 ? "" : "d-none"
                   }`}
                 >
-                  <FaPrint /> &nbsp; Invoice PDF filert
+                  <FaPrint /> &nbsp; Invoice PDF file
                 </Button>
               )}
             </div>

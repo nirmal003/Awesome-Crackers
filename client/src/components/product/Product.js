@@ -89,7 +89,7 @@ function Product() {
                         className="img-fluid"
                         loading="lazy"
                         src={u.Image}
-                        alt={u.Product_id}
+                        alt="no-image"
                         onClick={() =>
                           navigate(`/product/${u.Product_id}`, {
                             state: u.Image,
