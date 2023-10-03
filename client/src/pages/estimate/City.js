@@ -6,7 +6,7 @@ function City() {
       <option value="" disabled selected>
         ---- Select your city ----
       </option>
-      <option value="others">Others</option>
+      <option value="others"></option>
       <option value="Ambasamudram">Ambasamudram</option>
       <option value="Anamali">Anamali</option>
       <option value="Arakandanallur">Arakandanallur</option>
