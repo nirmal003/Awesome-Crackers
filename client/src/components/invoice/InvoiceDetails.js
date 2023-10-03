@@ -118,7 +118,7 @@ function InvoiceDetails({ dt, user }) {
     .join(" ")
     .replaceAll(`${user.state.toUpperCase()}`, "");
 
-  console.log("dgi", userAddress);
+  // console.log("dgi", userAddress);
 
   return (
     <>
