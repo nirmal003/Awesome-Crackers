@@ -99,6 +99,27 @@ function InvoiceDetails({ dt, user }) {
   // console.log(new Date(dt.date).getDate().toString().padStart(2, "0"));
   // console.log((new Date(dt.date).getMonth() + 1).toString().padStart(2, "0"));
 
+  const userAddress = user.address
+    .toString()
+    .replaceAll(`${user.city}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.city.toLowerCase()}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.city.toUpperCase()}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.state}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.state.toLowerCase()}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.state.toUpperCase()}`, "");
+
+  console.log("dgi", userAddress);
+
   return (
     <>
       <View style={styles.invoice}>
@@ -140,10 +161,8 @@ function InvoiceDetails({ dt, user }) {
           <Text>{user?.mobilenumber}</Text>
         </View>
         <View style={styles.address}>
-          <Text>{user?.address?.split(" ")?.slice(0, 3)?.join(" ")}</Text>
-          <Text>
-            {user?.address?.split(" ")?.slice(3, Infinity)?.join(" ")}
-          </Text>
+          <Text>{userAddress?.split(" ")?.slice(0, 3)?.join(" ")}</Text>
+          <Text>{userAddress?.split(" ")?.slice(3, Infinity)?.join(" ")}</Text>
           <Text>
             {user?.city} {user?.state}
           </Text>
