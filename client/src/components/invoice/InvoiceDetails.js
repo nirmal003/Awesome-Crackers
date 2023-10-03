@@ -101,24 +101,25 @@ function InvoiceDetails({ dt, user }) {
 
   const userAddress = user.address
     .toString()
-    .replaceAll(`${user.city}`, "")
+    .toLowerCase()
+    .replaceAll(`${user.city.toLowerCase() + ","}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${user.city.toLowerCase() + " "}`, "")
     .split(" ")
     .join(" ")
     .replaceAll(`${user.city.toLowerCase()}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${user.city.toUpperCase()}`, "")
+    .replaceAll(`${user.state.toLowerCase() + ","}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${user.state}`, "")
+    .replaceAll(`${user.state.toLowerCase() + " "}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${user.state.toLowerCase()}`, "")
-    .split(" ")
-    .join(" ")
-    .replaceAll(`${user.state.toUpperCase()}`, "");
+    .replaceAll(`${user.state.toLowerCase()}`, "");
 
-  // console.log("dgi", userAddress);
+  // console.log(userAddress);
 
   return (
     <>
