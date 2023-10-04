@@ -117,7 +117,16 @@ function InvoiceDetails({ dt, user }) {
     .replaceAll(`${user.state.toLowerCase() + " "}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${user.state.toLowerCase()}`, "");
+    .replaceAll(`${user.state.toLowerCase()}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${"tamilnadu" + ","}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${"tamilnadu" + " "}`, "")
+    .split(" ")
+    .join(" ")
+    .replaceAll(`${"tamilnadu"}`, "");
 
   // console.log(userAddress);
 
