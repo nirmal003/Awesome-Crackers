@@ -104,7 +104,7 @@ function Estimate() {
                 <option value="Pondicherry">Pondicherry</option>
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Kerala">Kerala</option>
-                <option value="others"></option>
+                <option value="">Others</option>
               </select>
             </div>
 
