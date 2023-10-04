@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    height: 59,
+    height: "auto",
     paddingTop: 6,
     paddingHorizontal: 8,
     fontSize: 11.5,
@@ -85,10 +85,12 @@ const styles = StyleSheet.create({
   address: {
     display: "flex",
     flexDirection: "column",
-    flexWrap: "wrap",
     lineHeight: 1.4,
     width: "70%",
     textAlign: "right",
+  },
+  addressone: {
+    flexWrap: "nowrap",
   },
 });
 
@@ -120,13 +122,13 @@ function InvoiceDetails({ dt, user }) {
     .replaceAll(`${user.state.toLowerCase()}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${"tamilnadu" + ","}`, "")
+    .replaceAll(`${user.state.includes("Tamil Nadu") && "tamilnadu" + ","}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${"tamilnadu" + " "}`, "")
+    .replaceAll(`${user.state.includes("Tamil Nadu") && "tamilnadu" + " "}`, "")
     .split(" ")
     .join(" ")
-    .replaceAll(`${"tamilnadu"}`, "");
+    .replaceAll(`${user.state.includes("Tamil Nadu") && "tamilnadu"}`, "");
 
   // console.log(userAddress);
 
@@ -171,8 +173,12 @@ function InvoiceDetails({ dt, user }) {
           <Text>{user?.mobilenumber}</Text>
         </View>
         <View style={styles.address}>
-          <Text>{userAddress?.split(" ")?.slice(0, 3)?.join(" ")}</Text>
-          <Text>{userAddress?.split(" ")?.slice(3, Infinity)?.join(" ")}</Text>
+          <Text style={styles.addressone}>
+            {userAddress?.split(" ")?.slice(0, 3)?.join(" ")}
+          </Text>
+          <Text style={styles.addresstwo}>
+            {userAddress?.split(" ")?.slice(3, Infinity)?.join(" ")}
+          </Text>
           <Text>
             {user?.city} {user?.state}
           </Text>
