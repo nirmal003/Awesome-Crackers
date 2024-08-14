@@ -57,7 +57,7 @@ function Home() {
       <div className="w-100">
         <img
           className="img-fluid"
-          src="https://nirmal003.github.io/Images/homeoffer.jpg"
+          src="https://vicky-8236.github.io/Images/1111.jpg"
           alt="Diwali Crackers"
           loading="lazy"
         />
