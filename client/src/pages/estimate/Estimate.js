@@ -23,6 +23,7 @@ function Estimate() {
 
   const userData = useSelector((state) => state.user.user);
   // console.log(userData);
+  const min_order_amount = 3000;
 
   const netTotal = cartProduct.length && helpers.netTotal(cartProduct);
   const totalPrice = cartProduct.length && helpers.overallPrice(cartProduct);
@@ -176,7 +177,7 @@ function Estimate() {
               </div>
               <div className="fw-bold d-flex justify-content-center flex-direction-row algin-items-center pt-2">
                 <span className="col-8">Min.Order Amount :</span>
-                <span className="col-4">₹ 2500.00</span>
+                <span className="col-4">₹ {min_order_amount}.00</span>
               </div>
               <div className="d-flex justify-content-center flex-direction-row algin-items-center pt-2">
                 <span className="col-8">Packing Charges (3%) :</span>
@@ -202,7 +203,7 @@ function Estimate() {
             <Button
               type="submit"
               className={`m-4 submit_btn ${
-                Math.round(totalPrice) > 2500 ? "" : "disabled"
+                Math.round(totalPrice) > { min_order_amount } ? "" : "disabled"
               }`}
             >
               Submit
