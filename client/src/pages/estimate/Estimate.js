@@ -203,7 +203,7 @@ function Estimate() {
             <Button
               type="submit"
               className={`m-4 submit_btn ${
-                Math.round(totalPrice) > { min_order_amount } ? "" : "disabled"
+                Math.round(totalPrice) > 3000 ? "" : "disabled"
               }`}
             >
               Submit
