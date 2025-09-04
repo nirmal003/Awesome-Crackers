@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Link, useLocation } from "react-router-dom";
@@ -139,9 +138,9 @@ function Footer() {
                         contact you within 24 hrs and confirm the order through
                         WhatsApp or phone call. Please add and submit your
                         enquiries and enjoy your Diwali with Awesome Crackers.
-                        Our License No.----. Awesome Crackers as a company
+                        Our License No: 97/2024. Awesome Crackers as a company
                         following 100% legal & statutory compliances and all our
-                        shops, go-downs are maintained as per the explosive
+                        shop maintained as per the explosive
                         acts. We send the parcels through registered and legal
                         transport service providers as like every other major
                         companies in Sivakasi is doing so.
