@@ -189,7 +189,7 @@ function Estimate() {
                   ₹{" "}
                   {roundOff.toFixed(2) > 0
                     ? `- ${roundOff.toFixed(2)}`
-                    : roundOff.toFixed(2) == 0
+                    : roundOff.toFixed(2) === 0
                     ? `${roundOff.toFixed(2)}`
                     : ` + ${Math.abs(roundOff.toFixed(2))}`}
                 </span>
