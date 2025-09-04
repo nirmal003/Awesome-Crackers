@@ -81,8 +81,8 @@ function Footer() {
                       <div className="text1">
                         <FaMapMarkerAlt className="text-white" />
                         <div className="roboto fn text-white smallfnt">
-                          4/480, Veerachelliya Puram,
-                          <br /> Sivakasi, Virudhunagar - 626 005
+                          2/155, K.pudur - Mathiyasenai main road,
+                          <br /> Melachinnayapuram, Sivakasi, Tamil Nadu - 626 204
                         </div>
                       </div>
 
@@ -139,7 +139,7 @@ function Footer() {
                         contact you within 24 hrs and confirm the order through
                         WhatsApp or phone call. Please add and submit your
                         enquiries and enjoy your Diwali with Awesome Crackers.
-                        Our License No: 97/2024. Awesome Crackers as a company
+                        Our License No: 97/2024, Our GST No: 33BJRPJ3460Q2ZK. Awesome Crackers as a company
                         following 100% legal & statutory compliances and all our
                         shop maintained as per the explosive
                         acts. We send the parcels through registered and legal
