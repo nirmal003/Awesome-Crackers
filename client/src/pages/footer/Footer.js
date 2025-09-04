@@ -1,3 +1,4 @@
+import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Link, useLocation } from "react-router-dom";
