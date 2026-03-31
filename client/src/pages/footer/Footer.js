@@ -170,7 +170,7 @@ function Footer() {
         )}
 
       <div className="fixed point w0">
-        <a onClick={() => window.open("https://wa.me/+919894740650")}>
+        <a href="https://wa.me/+919894740650" target="_blank" rel="noopener noreferrer">
           <img
             src="https://nirmal003.github.io/Images/whatsappicon.png"
             className="priceicn float-left filter"
