@@ -1,6 +1,6 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPrint } from "react-icons/fa";
 import { ImSpinner3 } from "react-icons/im";
@@ -23,7 +23,7 @@ function Invoice() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const callfn = async (blob) => {
+  const callfn = useCallback(async (blob) => {
     setPdfUrl(null);
     // console.log(blob);
 
@@ -53,11 +53,11 @@ function Invoice() {
     }
     const url_Link = JSON.parse(localStorage.getItem("url"));
     if (localStorage.length) setPdfUrl(url_Link);
-  };
+  }, [cartProduct, dt.time, dispatch]);
 
   useMemo(() => {
     callfn(blob);
-  }, [blob, dt.time]);
+  }, [blob, dt.time, callfn]);
 
   const goBack = () => {
     dispatch(deleteAllCart());

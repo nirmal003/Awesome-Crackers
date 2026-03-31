@@ -1,5 +1,4 @@
 import { Image, StyleSheet, Text, View } from "@react-pdf/renderer";
-import React from "react";
 
 const styles = StyleSheet.create({
   invoice: {

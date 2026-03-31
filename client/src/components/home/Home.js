@@ -2,7 +2,7 @@ import Aos from "aos";
 import React, { useEffect } from "react";
 import { Button, Col, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import WOW from "wowjs";
 import "./home.css";
@@ -10,28 +10,25 @@ import "./home.css";
 import { addData } from "./dataSlice";
 
 function Home() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetch(process.env.REACT_APP_KEY);
+        const jsonData = await data.json();
+        dispatch(addData(jsonData));
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchData();
     Aos.init();
 
     new WOW.WOW({
       live: false,
     }).init();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const data = await fetch(process.env.REACT_APP_KEY);
-      const jsonData = await data.json();
-      dispatch(addData(jsonData));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.data.data);
-  // console.log(data);
+  }, [dispatch]);
 
   return (
     <div className="w-100">
