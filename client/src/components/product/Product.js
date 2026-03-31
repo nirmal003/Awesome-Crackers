@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "react-bootstrap";
@@ -131,7 +131,7 @@ function Product() {
           ))
         ) : (
           <h1 className="fw-bold text-center  py-3 bg-warning">
-            <ImSpinner3 />
+            <ImSpinner3 className="spinner-spin" />
             &nbsp; Loading...
           </h1>
         )}

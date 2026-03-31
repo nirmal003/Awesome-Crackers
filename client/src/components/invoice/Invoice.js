@@ -1,6 +1,6 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPrint } from "react-icons/fa";
 import { ImSpinner3 } from "react-icons/im";
@@ -78,7 +78,7 @@ function Invoice() {
       ) : (
         <>
           <h4 className="fw-bold text-success my-2">
-            " Please wait until process is completing "
+            <ImSpinner3 className="spinner-spin" /> " Please wait until process is completing "
           </h4>
         </>
       )}
@@ -94,7 +94,7 @@ function Invoice() {
             <div>
               {!order && (
                 <Button className="fs-5">
-                  <ImSpinner3 />
+                  <ImSpinner3 className="spinner-spin" />
                   &nbsp; Loading...
                 </Button>
               )}
@@ -132,7 +132,7 @@ function Invoice() {
               Number(cartProduct.length) === 0 ? "" : "d-none"
             }`}
           >
-            <ImSpinner3 />
+            <ImSpinner3 className="spinner-spin" />
             &nbsp; Loading...
           </Button>
         </div>
