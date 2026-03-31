@@ -10,7 +10,7 @@ import { addUser } from "./userSlice";
 function Estimate() {
   useEffect(() => {
     if (Number(cartProduct.length) === 0) navigate("/product");
-  }, []);
+  }, [cartProduct.length, navigate]);
 
   const [user, setUser] = useState({});
   const [length, setLength] = useState(true);
@@ -20,9 +20,6 @@ function Estimate() {
 
   const cartProduct = useSelector((state) => state.cart.cart);
   // console.log(cartProduct);
-
-  const userData = useSelector((state) => state.user.user);
-  // console.log(userData);
   const min_order_amount = 3000;
 
   const netTotal = cartProduct.length && helpers.netTotal(cartProduct);
@@ -48,7 +45,7 @@ function Estimate() {
       const time = new Date(date).getTime();
       console.log(time);
 
-      const resp = fetch(
+      fetch(
         `${process.env.REACT_APP_ORDER}?order_Id=${new Date(
           date
         ).getTime()}&customer_Name=${user.name}&mobile_Number=${

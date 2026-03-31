@@ -15,28 +15,26 @@ function Product() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetch(process.env.REACT_APP_KEY);
+        const jsonData = await data.json();
+        dispatch(addData(jsonData));
+      } catch (error) {
+        console.log(error);
+      }
+    };
     fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const data = await fetch(process.env.REACT_APP_KEY);
-      const jsonData = await data.json();
-      dispatch(addData(jsonData));
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  }, [dispatch]);
 
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data.data);
   const cartProduct = useSelector((state) => state.cart.cart);
 
-  const remove =
-    cartProduct.length &&
-    cartProduct.filter((c) => {
-      if (Number(c.qty) === 0) dispatch(deleteCart(c.id));
-    });
+  // Remove items with zero quantity from cart
+  cartProduct.forEach((c) => {
+    if (Number(c.qty) === 0) dispatch(deleteCart(c.id));
+  });
 
   const totalDiscount =
     cartProduct.length && helpers.overallDiscount(cartProduct);
@@ -89,7 +87,7 @@ function Product() {
                         className="img-fluid"
                         loading="lazy"
                         src={u.Image}
-                        alt="no-image"
+                        alt=""
                         onClick={() =>
                           navigate(`/product/${u.Product_id}`, {
                             state: u.Image,
