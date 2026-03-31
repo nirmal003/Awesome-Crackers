@@ -13,6 +13,9 @@ import "./product.css";
 
 function Product() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.data.data);
+  const cartProduct = useSelector((state) => state.cart.cart);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,10 +29,6 @@ function Product() {
     };
     fetchData();
   }, [dispatch]);
-
-  const dispatch = useDispatch();
-  const data = useSelector((state) => state.data.data);
-  const cartProduct = useSelector((state) => state.cart.cart);
 
   // Remove items with zero quantity from cart
   cartProduct.forEach((c) => {

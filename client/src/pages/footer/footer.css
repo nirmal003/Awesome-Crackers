@@ -1,6 +1,6 @@
 .text1 {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   text-align: start;
   padding: 6px 0 6px 40px;

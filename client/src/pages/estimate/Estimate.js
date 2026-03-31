@@ -8,10 +8,6 @@ import "./estimate.css";
 import { addUser } from "./userSlice";
 
 function Estimate() {
-  useEffect(() => {
-    if (Number(cartProduct.length) === 0) navigate("/product");
-  }, [cartProduct.length, navigate]);
-
   const [user, setUser] = useState({});
   const [length, setLength] = useState(true);
 
@@ -19,6 +15,10 @@ function Estimate() {
   const dispatch = useDispatch();
 
   const cartProduct = useSelector((state) => state.cart.cart);
+
+  useEffect(() => {
+    if (Number(cartProduct.length) === 0) navigate("/product");
+  }, [cartProduct.length, navigate]);
   // console.log(cartProduct);
   const min_order_amount = 3000;
 
