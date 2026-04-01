@@ -1,6 +1,6 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaPrint } from "react-icons/fa";
 import { ImSpinner3 } from "react-icons/im";
@@ -25,7 +25,7 @@ function Invoice() {
 
   const callfn = async (blob) => {
     setPdfUrl(null);
-    // console.log(blob);
+    // console.log(blob)
 
     if (Number(cartProduct.length) !== 0 && blob) {
       try {
