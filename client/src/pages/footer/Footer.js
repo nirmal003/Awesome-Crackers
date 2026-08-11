@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 import { Link, useLocation } from "react-router-dom";
@@ -144,7 +143,7 @@ function Footer() {
                         shop maintained as per the explosive
                         acts. We send the parcels through registered and legal
                         transport service providers as like every other major
-                        companies in Sivakasi is doing so.
+                        companies in Sivakasi is doing so ee.
                       </p>
                     </div>
                   </div>

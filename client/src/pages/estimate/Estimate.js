@@ -195,7 +195,7 @@ function Estimate() {
                 </span>
               </div>
               <div className="d-flex justify-content-center flex-direction-row algin-items-center pt-2">
-                <span className="col-8">Overall Totals :</span>
+                <span className="col-8">Overall Total :</span>
                 <span className="col-4">₹ {overallTotal}.00</span>
               </div>
             </div>
