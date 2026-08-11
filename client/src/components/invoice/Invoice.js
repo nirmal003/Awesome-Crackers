@@ -77,9 +77,15 @@ function Invoice() {
         </>
       ) : (
         <>
-          <h4 className="fw-bold text-success my-2">
-            " Please wait until process is completing "
-          </h4>
+          <div className="d-flex align-items-center justify-content-center gap-2">
+            <i
+              className="bi bi-arrow-repeat text-success processing-icon"
+              style={{ fontSize: '28px' }}
+            ></i>
+            <h4 className="fw-bold text-success my-2">
+              Please wait until process is completing
+            </h4>
+          </div>
         </>
       )}
       <h2 className="fw-bold my-2 mb-3">Download PDF Invoice</h2>
