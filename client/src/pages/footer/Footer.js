@@ -143,7 +143,7 @@ function Footer() {
                         shop maintained as per the explosive
                         acts. We send the parcels through registered and legal
                         transport service providers as like every other major
-                        companies in Sivakasi is doing so ee.
+                        companies in Sivakasi is doing so.
                       </p>
                     </div>
                   </div>
