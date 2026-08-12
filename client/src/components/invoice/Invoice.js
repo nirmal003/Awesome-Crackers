@@ -128,7 +128,7 @@ function Invoice() {
         <div>
           <Button
             className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
-              Number(cartProduct.length) === 0 ? "" : "d-none"
+              Number(cartProduct.length) !== 0 ? "" : "d-none"
             }`}
           >
             <ImSpinner3 />
