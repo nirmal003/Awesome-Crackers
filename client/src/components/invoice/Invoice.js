@@ -88,7 +88,6 @@ function Invoice() {
           </div>
         </>
       )}
-      <h2 className="fw-bold my-2 mb-3">Download PDF Invoice</h2>
 
       <PDFDownloadLink
         className="mb-2"
@@ -106,31 +105,25 @@ function Invoice() {
               )}
             </div>
           ) : (
-            <div onClick={setBlob(blob)}>
-              {!order && (
-                <Button
-                  className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
-                    cartProduct.length !== 0 ? "" : "d-none"
-                  }`}
-                >
-                  <FaPrint /> &nbsp; Invoice PDF file
-                </Button>
-              )}
-            </div>
+            <div onClick={setBlob(blob)} />
           )
         }
       </PDFDownloadLink>
 
       {pdfUrl ? (
-        <a href={pdfUrl} download="invoice" target="_blank" rel="noreferrer">
-          <Button
-            className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
-              Number(cartProduct.length) === 0 ? "" : "d-none"
-            }`}
-          >
-            <FaPrint /> &nbsp; Invoice PDF file
-          </Button>
-        </a>
+        <>
+          <h2 className="fw-bold my-2 mb-3">Download PDF Invoice</h2>
+          <br />
+          <a href={pdfUrl} download="invoice" target="_blank" rel="noreferrer">
+            <Button
+              className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
+                Number(cartProduct.length) === 0 ? "" : "d-none"
+              }`}
+            >
+              <FaPrint /> &nbsp; Invoice PDF file
+            </Button>
+          </a>
+        </>
       ) : (
         <div>
           <Button
@@ -164,16 +157,6 @@ function Invoice() {
             Don't Go Back
           </Button>
         </div>
-      )}
-
-      {pdfUrl && (
-        <iframe
-          src={pdfUrl}
-          width="100%"
-          height={940}
-          title="invoice"
-          className="d-none d-lg-block d-md-block"
-        />
       )}
     </div>
   );
