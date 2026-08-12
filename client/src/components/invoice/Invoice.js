@@ -1,9 +1,8 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useMemo, useState } from "react";
-import { Button } from "react-bootstrap";
+import { Alert, Button, Spinner } from "react-bootstrap";
 import { FaPrint } from "react-icons/fa";
-import { ImSpinner3 } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { storage } from "./firebase";
@@ -67,26 +66,19 @@ function Invoice() {
   return (
     <div className="d-flex flex-column  my-3 mb-5 pb-5">
       {order ? (
-        <>
-          <h2 className="fw-bold text-success my-2">
-            Your order successfully placed...
-          </h2>
-          <h5 className="thanks_card">
-            Thanks for purchasing in Awesome Crackers. We will contact you soon
-          </h5>
-        </>
+        <Alert variant="success" className="text-center">
+          <Alert.Heading>Your order successfully placed...</Alert.Heading>
+          <p>
+            Thanks for purchasing in Awesome Crackers. We will contact you soon.
+          </p>
+        </Alert>
       ) : (
-        <>
-          <div className="d-flex align-items-center justify-content-center gap-2">
-            <i
-              className="bi bi-arrow-repeat text-success processing-icon"
-              style={{ fontSize: '28px' }}
-            ></i>
-            <h4 className="fw-bold text-success my-2">
-              Please wait until process is completing
-            </h4>
-          </div>
-        </>
+        <div className="d-flex flex-column align-items-center justify-content-center gap-2">
+          {/* <Spinner animation="border" role="status" variant="success" /> */}
+          <h4 className="fw-bold text-success my-2">
+            Please wait while we process your invoice
+          </h4>
+        </div>
       )}
 
       <PDFDownloadLink
@@ -98,10 +90,10 @@ function Invoice() {
           loading ? (
             <div>
               {!order && (
-                <Button className="fs-5">
-                  <ImSpinner3 />
-                  &nbsp; Loading...
-                </Button>
+                <div className="text-center my-4">
+                  <Spinner animation="border" role="status" variant="success" />
+                  <div className="mt-2">Preparing invoice...</div>
+                </div>
               )}
             </div>
           ) : (
@@ -111,29 +103,19 @@ function Invoice() {
       </PDFDownloadLink>
 
       {pdfUrl ? (
-        <>
+        <div className="text-center my-3">
           <h2 className="fw-bold my-2 mb-3">Download PDF Invoice</h2>
           <br />
           <a href={pdfUrl} download="invoice" target="_blank" rel="noreferrer">
-            <Button
-              className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
-                Number(cartProduct.length) === 0 ? "" : "d-none"
-              }`}
-            >
+            <Button className="bg-secondary fw-bold border-0 px-3 fs-5">
               <FaPrint /> &nbsp; Invoice PDF file
             </Button>
           </a>
-        </>
+        </div>
       ) : (
-        <div>
-          <Button
-            className={`bg-secondary fw-bold border-0 px-3 fs-5 ${
-              Number(cartProduct.length) !== 0 ? "" : "d-none"
-            }`}
-          >
-            <ImSpinner3 />
-            &nbsp; Loading...
-          </Button>
+        <div className="text-center my-4">
+          <Spinner animation="border" role="status" variant="success" />
+          <div className="mt-2">Preparing invoice...</div>
         </div>
       )}
 
